@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hotel Entrepreneur – apgyvendinimas Mažeikiuose</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0908;--bg2:#13100d;--card:#18130f;--gold:#d4b06a;--cream:#f3ead8;--mut:#a59a86;--line:rgba(212,176,106,.18);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;margin:0}
+html{background:var(--bg);scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--mut);font-family:Sora,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.7;overflow-x:hidden}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+section{padding:110px 0;position:relative}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;color:var(--cream);font-weight:600;line-height:1.02;letter-spacing:-.01em}
+h2{font-size:clamp(36px,5.6vw,68px);margin-bottom:16px}
+.tag{display:inline-block;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.lead{max-width:600px;margin-bottom:46px}
+#pre{position:fixed;inset:0;z-index:999;background:var(--bg);display:grid;place-items:center;color:var(--cream);text-align:center}
+#pre{animation:preOut .6s ease 3.6s forwards}@keyframes preOut{to{opacity:0;visibility:hidden;pointer-events:none}}
+#pre b{font:600 clamp(54px,13vw,130px) "Cormorant Garamond",Georgia,serif}#pre small{display:block;letter-spacing:.3em;color:var(--gold);font-size:12px}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:linear-gradient(90deg,var(--gold),#fff3d6);transform:scaleX(0);transform-origin:0;z-index:100}
+.cur{position:fixed;left:0;top:0;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;background:#fff;mix-blend-mode:difference;pointer-events:none;z-index:998;display:none}
+@media(pointer:fine){.cur{display:block}}
+nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:calc(12px + env(safe-area-inset-top,0px)) 22px 12px;display:flex;justify-content:space-between;align-items:center;gap:14px;background:rgba(11,9,8,.6);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+nav b{font:600 20px "Cormorant Garamond",Georgia,serif;color:var(--cream);letter-spacing:.04em}nav b span{color:var(--gold)}
+nav .links{display:flex;gap:28px;font-size:14px}nav .links a:hover{color:var(--cream)}
+.lang{display:flex;gap:6px}.lang button{background:none;border:1px solid var(--line);color:var(--mut);border-radius:99px;padding:6px 12px;font:12px Sora,sans-serif;cursor:pointer}.lang button.on{background:var(--gold);color:#1a1208;border-color:var(--gold)}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:15px 30px;border-radius:999px;background:var(--gold);color:#1a1208;border:0;cursor:pointer;font:600 15px Sora,sans-serif;box-shadow:0 14px 50px -14px var(--gold)}
+.btn.ghost{background:rgba(255,255,255,.03);border:1px solid var(--line);color:var(--cream);box-shadow:none}
+.hero{min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:120px 0 70px}
+#gl{position:absolute;inset:0;width:100%;height:100%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,var(--bg))}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(46px,8vw,112px)}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em}.hero h1 .w>span{display:inline-block}
+.hero p{max-width:500px;margin:22px 0 32px;font-size:17px;color:#d8cdb8}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.hc{perspective:1000px}
+.hcard{padding:38px;border-radius:30px;border:1px solid var(--line);background:linear-gradient(160deg,rgba(212,176,106,.16),rgba(24,19,15,.85));backdrop-filter:blur(14px);box-shadow:0 50px 90px -30px #000;transform-style:preserve-3d}
+.hcard small{letter-spacing:.2em;text-transform:uppercase;font-size:11px;color:var(--gold)}
+.hcard b{display:block;font:600 clamp(60px,8vw,96px) "Cormorant Garamond",Georgia,serif;color:var(--cream);line-height:1;margin:8px 0}
+.hcard i{display:block;font-style:normal;font-size:14px;padding:9px 0;border-top:1px solid var(--line);transform:translateZ(30px)}
+.marq{border-block:1px solid var(--line);overflow:hidden;padding:20px 0;background:var(--bg2);white-space:nowrap}
+.marq div{display:inline-block;font:600 clamp(30px,5vw,56px) "Cormorant Garamond",Georgia,serif;color:transparent;-webkit-text-stroke:1px var(--gold);letter-spacing:.04em}
+.lite{font:600 clamp(28px,4.6vw,56px) "Cormorant Garamond",Georgia,serif;line-height:1.2;color:var(--cream);max-width:1000px}.lite span{opacity:.15}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:24px;padding:32px;overflow:hidden;transform-style:preserve-3d}
+.card:before{content:"";position:absolute;inset:0;background:radial-gradient(340px circle at var(--x,50%) var(--y,-40%),rgba(212,176,106,.22),transparent 60%);opacity:0;transition:opacity .3s}
+.card:hover:before{opacity:1}.card>*{position:relative}
+.ic{width:48px;height:48px;border-radius:15px;background:rgba(212,176,106,.12);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
+.card h3{font-size:28px;margin-bottom:8px}.card p{font-size:15px}
+.price{font:600 56px "Cormorant Garamond",Georgia,serif;color:var(--cream);margin:6px 0 14px}.price small{font:13px Sora,sans-serif;color:var(--mut)}
+.card ul{list-style:none;padding:0;margin-bottom:24px;font-size:15px}.card li{padding:7px 0;border-bottom:1px solid var(--line)}.card li:before{content:"✓ ";color:var(--gold)}
+.card.hot{border-color:var(--gold);background:linear-gradient(170deg,#2a2010,var(--card))}
+.badge{position:absolute!important;top:18px;right:18px;background:var(--gold);color:#1a1208;font-size:11px;padding:4px 12px;border-radius:99px}
+.book{background:var(--bg2)}.bk{display:grid;grid-template-columns:1fr 1.2fr;gap:44px;align-items:start}
+.info p{margin:10px 0}.info a{color:var(--cream);font-weight:600}
+form{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:32px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.f{grid-column:1/-1}label{font-size:13px;display:block;margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:12px;color:var(--cream);padding:13px 14px;font:15px Sora,sans-serif}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold)}
+#ok{display:none;padding:14px;border-radius:12px;background:rgba(212,176,106,.14);color:var(--cream)}
+.big{font:600 clamp(48px,13vw,190px) "Cormorant Garamond",Georgia,serif;color:transparent;-webkit-text-stroke:1px rgba(212,176,106,.4);text-align:center;line-height:1;padding:50px 0 10px;overflow:hidden;white-space:nowrap}
+footer{padding:26px 0 34px;border-top:1px solid var(--line);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:860px){nav .links{display:none}.hero .wrap,.bk{grid-template-columns:1fr}form{grid-template-columns:1fr}section{padding:76px 0}}
+</style>
+</head>
+<body>
+<div id="pre"><div><b id="pc">0</b><small>HOTEL ENTREPRENEUR</small></div></div>
+<div id="bar"></div><div class="cur" id="cur"></div>
+<nav><b>HOTEL <span>ENTREPRENEUR</span></b>
+<div class="links"><a href="#kodel" data-k="n1">Kodėl mes</a><a href="#kainos" data-k="n2">Kainos</a><a href="#rezervacija" data-k="n3">Rezervacija</a></div>
+<div class="lang"><button class="on" data-l="lt">LT</button><button data-l="ru">RU</button></div></nav>
+
+<header class="hero"><canvas id="gl"></canvas>
+<div class="wrap"><div>
+<span class="tag" data-k="tag">Apgyvendinimas · Mažeikiai</span>
+<h1 id="h1" data-k="h1">Jūsų namai kelionėje.</h1>
+<p data-k="hp">Patogus, švarus ir ramus apgyvendinimas Mažeikiuose – trumpam sustojimui, komandiruotei ar ilgesniam laikui.</p>
+<div class="cta"><a class="btn mag" href="#rezervacija" data-k="b1">Rezervuoti →</a><a class="btn ghost mag" href="tel:+37068875160">+370 688 75160</a></div>
+</div>
+<div class="hc"><div class="hcard" id="hc"><small data-k="from">Nuo</small><b>39 €</b><small data-k="night">už naktį</small><div style="height:18px"></div><i data-k="f1">Patogi vieta Mažeikiuose</i><i data-k="f2">Lanksti atvykimo tvarka</i><i data-k="f3">Verslui ir poilsiui</i></div></div>
+</div></header>
+
+<div class="marq"><div id="mq">APARTAMENTAI • KOMANDIRUOTĖS • POILSIS • MAŽEIKIAI • APARTAMENTAI • KOMANDIRUOTĖS • POILSIS • MAŽEIKIAI • APARTAMENTAI • KOMANDIRUOTĖS • POILSIS • MAŽEIKIAI • </div></div>
+
+<section><div class="wrap"><p class="lite" id="lite" data-k="lite">Atvykite, atsipalaiduokite ir jauskitės kaip namie. Mes pasirūpiname komfortu, o Jūs – kelione.</p></div></section>
+
+<section id="kodel" style="background:var(--bg2)"><div class="wrap">
+<span class="tag" data-k="t2">Kodėl mes</span><h2 data-k="h2a">Svetingumas be kompromisų</h2>
+<p class="lead" data-k="l2">Dėmesys detalėms, aiškios sąlygos ir greitas bendravimas.</p>
+<div class="grid">
+<div class="card tl"><div class="ic">🛏️</div><h3 data-k="c1t">Komfortas</h3><p data-k="c1p">Švari, jauki ir paruošta aplinka, kurioje lengva pailsėti.</p></div>
+<div class="card tl"><div class="ic">🔑</div><h3 data-k="c2t">Lengvas atvykimas</h3><p data-k="c2p">Aiški ir lanksti atvykimo tvarka – be eilių ir laukimo.</p></div>
+<div class="card tl"><div class="ic">🏢</div><h3 data-k="c3t">Verslui</h3><p data-k="c3p">Komandiruotėms ir darbuotojų apgyvendinimui – su sąskaita faktūra.</p></div>
+<div class="card tl"><div class="ic">💬</div><h3 data-k="c4t">Greitas ryšys</h3><p data-k="c4p">Atsakome telefonu ir žinute – lietuvių bei rusų kalbomis.</p></div>
+</div></div></section>
+
+<section id="kainos"><div class="wrap">
+<span class="tag" data-k="t3">Kainos</span><h2 data-k="h3a">Aiški kaina, jokių staigmenų</h2>
+<p class="lead" data-k="l3">Orientacinės kainos. Tikslią sumą pateiksime pagal datas ir svečių skaičių.</p>
+<div class="grid">
+<div class="card tl"><h3 data-k="p1">Nakvynė</h3><div class="price">39 €<small data-k="pn"> / naktį</small></div><ul data-k="u1"><li>Trumpam sustojimui</li><li>Lankstus atvykimas</li><li>Greitas rezervavimas</li></ul><a class="btn ghost" href="#rezervacija" data-k="b2">Rezervuoti</a></div>
+<div class="card hot tl"><span class="badge" data-k="pop">Populiariausia</span><h3 data-k="p2">Savaitė</h3><div class="price">230 €<small data-k="pw"> / 7 naktims</small></div><ul data-k="u2"><li>Tik apie 33 € už naktį</li><li>Tinka komandiruotėms</li><li>Patogi ilgesnė viešnagė</li></ul><a class="btn" href="#rezervacija" data-k="b2">Rezervuoti</a></div>
+<div class="card tl"><h3 data-k="p3">Ilgalaikė nuoma</h3><div class="price">Nuo 600 €<small data-k="pm"> / mėn.</small></div><ul data-k="u3"><li>Įmonėms ir darbuotojams</li><li>Sutartis pagal poreikį</li><li>Geriausia kaina</li></ul><a class="btn ghost" href="#rezervacija" data-k="b3">Gauti pasiūlymą</a></div>
+</div></div></section>
+
+<section id="rezervacija" class="book"><div class="wrap bk">
+<div class="info"><span class="tag" data-k="t4">Rezervacija</span><h2 data-k="h4a">Rezervuokite dabar</h2>
+<p data-k="l4">Užpildykite formą – ji atsidarys WhatsApp žinutėje. Arba paskambinkite.</p>
+<p>📞 <a href="tel:+37068875160">+370 688 75160</a></p><p>📍 Mažeikiai</p></div>
+<form id="f">
+<div><label for="n" data-k="fn">Vardas / Įmonė</label><input id="n" required></div>
+<div><label for="t" data-k="ft">Telefonas</label><input id="t" type="tel" required></div>
+<div><label for="a" data-k="fa">Atvykimas</label><input id="a" type="date" required></div>
+<div><label for="b" data-k="fb">Išvykimas</label><input id="b" type="date" required></div>
+<div class="f"><label for="g" data-k="fg">Svečių skaičius</label><select id="g"><option>1</option><option>2</option><option>3</option><option>4</option><option>5+</option></select></div>
+<div class="f"><label for="m" data-k="fm">Žinutė</label><textarea id="m" rows="3"></textarea></div>
+<button class="btn f mag" type="submit" style="justify-content:center" data-k="fs">Siųsti užklausą →</button>
+<div id="ok" class="f" data-k="ok">Ačiū! Atidarome WhatsApp su Jūsų užklausa.</div>
+</form></div></section>
+
+<div class="big" id="big">ENTREPRENEUR</div>
+<footer><div class="wrap"><span>© <span id="y"></span> Hotel Entrepreneur, UAB</span><span>Mažeikiai · +370 688 75160</span></div></footer>
+
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const pre=document.getElementById('pre');setTimeout(()=>pre&&pre.remove(),5000);
+// i18n LT/RU
+const RU={n1:'Почему мы',n2:'Цены',n3:'Бронь',tag:'Размещение · Мажейкяй',h1:'Ваш дом в пути.',hp:'Удобное, чистое и тихое жильё в Мажейкяй – для короткой остановки, командировки или длительного проживания.',b1:'Забронировать →',from:'От',night:'за ночь',f1:'Удобное место в Мажейкяй',f2:'Гибкое заселение',f3:'Для бизнеса и отдыха',lite:'Приезжайте, отдыхайте и чувствуйте себя как дома. Мы позаботимся о комфорте, а вы – о поездке.',t2:'Почему мы',h2a:'Гостеприимство без компромиссов',l2:'Внимание к деталям, понятные условия и быстрая связь.',c1t:'Комфорт',c1p:'Чистая, уютная и подготовленная среда для отдыха.',c2t:'Лёгкое заселение',c2p:'Понятный и гибкий порядок заселения – без очередей и ожидания.',c3t:'Для бизнеса',c3p:'Для командировок и размещения сотрудников – со счётом-фактурой.',c4t:'Быстрая связь',c4p:'Отвечаем по телефону и в сообщениях – на литовском и русском.',t3:'Цены',h3a:'Понятная цена, без сюрпризов',l3:'Ориентировочные цены. Точную сумму назовём по датам и числу гостей.',p1:'Сутки',pn:' / ночь',u1:'<li>Для короткой остановки</li><li>Гибкое заселение</li><li>Быстрое бронирование</li>',b2:'Забронировать',pop:'Популярно',p2:'Неделя',pw:' / 7 ночей',u2:'<li>Около 33 € за ночь</li><li>Подходит для командировок</li><li>Удобное длительное проживание</li>',p3:'Долгосрочная аренда',pm:' / мес.',u3:'<li>Для компаний и сотрудников</li><li>Договор по потребности</li><li>Лучшая цена</li>',b3:'Получить предложение',t4:'Бронь',h4a:'Забронируйте сейчас',l4:'Заполните форму – откроется сообщение в WhatsApp. Или позвоните.',fn:'Имя / Компания',ft:'Телефон',fa:'Заезд',fb:'Выезд',fg:'Число гостей',fm:'Сообщение',fs:'Отправить запрос →',ok:'Спасибо! Открываем WhatsApp с вашим запросом.'};
+let L='lt';const els=[...document.querySelectorAll('[data-k]')];els.forEach(e=>e.dataset.lt=e.innerHTML);
+function setL(l){L=l;document.documentElement.lang=l;els.forEach(e=>{e.innerHTML=l==='ru'?(RU[e.dataset.k]||e.dataset.lt):e.dataset.lt});document.querySelectorAll('.lang button').forEach(b=>b.classList.toggle('on',b.dataset.l===l));document.getElementById('h1').style.opacity=1;}
+document.querySelectorAll('.lang button').forEach(b=>b.addEventListener('click',()=>setL(b.dataset.l)));
+// booking -> WhatsApp
+['a','b'].forEach(i=>document.getElementById(i).min=new Date().toISOString().split('T')[0]);
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const v=i=>document.getElementById(i).value;
+const t=(L==='ru'?'Здравствуйте, хочу забронировать жильё.\nИмя: ':'Sveiki, noriu rezervuoti apgyvendinimą.\nVardas/Įmonė: ')+v('n')+'\nTel.: '+v('t')+'\n'+v('a')+' – '+v('b')+'\n'+(L==='ru'?'Гостей: ':'Svečių: ')+v('g')+'\n'+v('m');
+document.getElementById('ok').style.display='block';window.open('https://wa.me/37068875160?text='+encodeURIComponent(t),'_blank')});
+// WebGL fluid shader (champagne)
+(function(){const c=document.getElementById('gl'),g=c.getContext('webgl');if(!g)return;
+const vs='attribute vec2 p;void main(){gl_Position=vec4(p,0.,1.);}';
+const fs=`precision mediump float;uniform vec2 R,M;uniform float T;
+float h(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float n(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(h(i),h(i+vec2(1.,0.)),f.x),mix(h(i+vec2(0.,1.)),h(i+vec2(1.,1.)),f.x),f.y);}
+float fbm(vec2 p){float v=0.,a=.5;for(int i=0;i<5;i++){v+=a*n(p);p*=2.;a*=.5;}return v;}
+void main(){vec2 u=gl_FragCoord.xy/R;vec2 q=u*vec2(R.x/R.y,1.)*2.;float t=T*.12;vec2 m=(M-u)*vec2(R.x/R.y,1.);
+vec2 w=vec2(fbm(q+t),fbm(q+vec2(5.2,1.3)-t));float f=fbm(q+3.*w-m*.9+t);
+vec3 col=mix(vec3(.03,.025,.02),vec3(.42,.28,.1),smoothstep(.25,.8,f));
+col=mix(col,vec3(.95,.82,.55),smoothstep(.6,1.,f*w.x*2.)*.5);
+col+=.28*exp(-length(m)*3.5)*vec3(.9,.6,.2);col*=1.-.55*length(u-.5);gl_FragColor=vec4(col,1.);}`;
+const sh=(t,s)=>{const o=g.createShader(t);g.shaderSource(o,s);g.compileShader(o);return o};
+const pr=g.createProgram();g.attachShader(pr,sh(g.VERTEX_SHADER,vs));g.attachShader(pr,sh(g.FRAGMENT_SHADER,fs));g.linkProgram(pr);g.useProgram(pr);
+g.bindBuffer(g.ARRAY_BUFFER,g.createBuffer());g.bufferData(g.ARRAY_BUFFER,new Float32Array([-1,-1,1,-1,-1,1,1,1]),g.STATIC_DRAW);
+const l=g.getAttribLocation(pr,'p');g.enableVertexAttribArray(l);g.vertexAttribPointer(l,2,g.FLOAT,false,0,0);
+const uR=g.getUniformLocation(pr,'R'),uM=g.getUniformLocation(pr,'M'),uT=g.getUniformLocation(pr,'T');
+let mx=.5,my=.5,sx=.5,sy=.5,vis=true;
+addEventListener('pointermove',e=>{mx=e.clientX/innerWidth;my=1-e.clientY/innerHeight});
+new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(c);
+function rs(){c.width=c.clientWidth*.5;c.height=c.clientHeight*.5;g.viewport(0,0,c.width,c.height)}rs();addEventListener('resize',rs);
+(function f(t){requestAnimationFrame(f);if(!vis)return;sx+=(mx-sx)*.05;sy+=(my-sy)*.05;g.uniform2f(uR,c.width,c.height);g.uniform2f(uM,sx,sy);g.uniform1f(uT,t/1000);g.drawArrays(g.TRIANGLE_STRIP,0,4)})(0);
+})();
+// GSAP / Lenis
+function rm(){if(pre)pre.remove()}
+function fail(){rm();document.querySelectorAll('h1 .w>span,.hero .tag,.hero p,.hero .cta,.hcard,.card,.lead,h2,.tag,.info p,form,#big,#lite span,.marq div').forEach(e=>{e.style.opacity='1';e.style.transform='none'})}
+function boot(){try{
+if(window.gsap&&window.ScrollTrigger){
+gsap.registerPlugin(ScrollTrigger);
+let lenis=null;try{if(window.Lenis){lenis=new Lenis({lerp:.085});lenis.on('scroll',ScrollTrigger.update);gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0)}}catch(e){lenis=null}
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const el=document.querySelector(a.getAttribute('href'));if(el&&lenis){e.preventDefault();lenis.scrollTo(el,{offset:-60})}}));
+gsap.to('#bar',{scaleX:1,ease:'none',scrollTrigger:{scrub:.3,start:0,end:'max'}});
+const h=document.getElementById('h1');h.innerHTML=h.textContent.split(' ').map(w=>'<span class="w"><span>'+w+'</span></span> ').join('');
+const pc=document.getElementById('pc'),o={v:0};
+const intro=gsap.timeline({paused:true})
+.from('#h1 .w>span',{yPercent:120,rotate:6,duration:1.2,stagger:.1,ease:'power4.out'})
+.from('.hero .tag,.hero p,.hero .cta',{y:30,opacity:0,duration:.9,stagger:.1,ease:'power3.out'},'-=.8')
+.from('.hcard',{y:90,opacity:0,rotationX:25,duration:1.3,ease:'power4.out'},'-=1.3');
+gsap.timeline().to(o,{v:100,duration:1.3,ease:'power2.inOut',onUpdate:()=>pc.textContent=Math.round(o.v)})
+.to('#pre',{yPercent:-100,duration:.9,ease:'power4.inOut',onStart:()=>intro.play()}).set('#pre',{display:'none'});
+const lt=document.getElementById('lite');lt.innerHTML=lt.textContent.split(' ').map(w=>'<span>'+w+'</span>').join(' ');
+gsap.to('#lite span',{opacity:1,stagger:.1,ease:'none',scrollTrigger:{trigger:'#lite',start:'top 80%',end:'bottom 45%',scrub:true}});
+const mq=document.getElementById('mq');mq.parentNode.appendChild(mq.cloneNode(true));
+const mt=gsap.to('.marq div',{xPercent:-100,duration:30,ease:'none',repeat:-1});
+ScrollTrigger.create({onUpdate:s=>{const v=s.getVelocity();gsap.to(mt,{timeScale:1+Math.min(Math.abs(v)/250,8),duration:.2,overwrite:true});gsap.to(mt,{timeScale:1,delay:.3,duration:1});gsap.to('.marq',{skewX:Math.max(-8,Math.min(8,-v/300)),duration:.3,overwrite:'auto'})}});
+gsap.utils.toArray('.card,.lead,h2,.tag,.info p,form').forEach(el=>gsap.from(el,{y:60,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 90%'}}));
+gsap.from('#big',{yPercent:60,opacity:0,duration:1.4,ease:'power4.out',scrollTrigger:{trigger:'#big',start:'top 95%'}});
+const tilt=(el,m)=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;el.style.setProperty('--x',x*100+'%');el.style.setProperty('--y',y*100+'%');gsap.to(el,{rotationY:(x-.5)*m,rotationX:-(y-.5)*m,transformPerspective:900,duration:.5,ease:'power2.out'})});el.addEventListener('pointerleave',()=>gsap.to(el,{rotationX:0,rotationY:0,duration:.8,ease:'elastic.out(1,.5)'}))};
+document.querySelectorAll('.card').forEach(c=>tilt(c,10));tilt(document.getElementById('hc'),16);
+gsap.to('.hcard',{y:-30,ease:'none',scrollTrigger:{trigger:'.hero',scrub:true,start:'top top',end:'bottom top'}});
+document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.28,y:(e.clientY-r.top-r.height/2)*.4,duration:.3})});b.addEventListener('pointerleave',()=>gsap.to(b,{x:0,y:0,duration:.7,ease:'elastic.out(1,.4)'}))});
+const cu=document.getElementById('cur'),qx=gsap.quickTo(cu,'x',{duration:.25}),qy=gsap.quickTo(cu,'y',{duration:.25});
+addEventListener('pointermove',e=>{qx(e.clientX);qy(e.clientY)});
+document.querySelectorAll('a,button,.card').forEach(e=>{e.addEventListener('pointerenter',()=>gsap.to(cu,{scale:3.2,duration:.3}));e.addEventListener('pointerleave',()=>gsap.to(cu,{scale:1,duration:.3}))});
+}else{rm()}
+}catch(err){console.error(err);fail()}}
+document.addEventListener('DOMContentLoaded',boot);
+</script>
+</body>
+</html>
